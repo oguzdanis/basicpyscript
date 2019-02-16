@@ -1,3 +1,4 @@
+#Youtube'dan indirmek istediginiz videoyu istediginiz yol'a istediginiz cozunurluk ve formatda indiren program.
 from pytube import YouTube
 import sys
 link=input("Enter the Youtube video URL")
