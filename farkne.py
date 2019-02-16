@@ -1,3 +1,4 @@
+#iki dosya arasindaki farkin hangi satirda oldugunu bulan program
 txt1=input("ilk yolu veriniz")
 txt2=input("ikinci yolu veriniz")
 
