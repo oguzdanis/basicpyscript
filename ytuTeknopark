@@ -1,0 +1,33 @@
+import requests
+from bs4 import BeautifulSoup
+
+res = requests.get("https://www.yildizteknopark.com.tr/tr/icerik-0/firmalar-27.html")
+soup = BeautifulSoup(res.content,"html.parser")
+
+#print(source.find('a').text)
+
+#Http durum kodunu döner
+#print(res.status_code)#200 inş
+
+title = soup.select('title')
+#site başlığı
+#print(title)
+
+#print(soup)
+
+#sadece bir şirket getirir.
+#sirketler = soup.find('div',attrs={"class":"firm-content"})
+
+#Bütün şirketleri getirir.
+#sirketler = soup.findAll('div',attrs={"class":"firm-content"})
+
+#Bütün şirketlerin sadece şirket ismini getirir.
+#sirketler = soup.find_all('h4',attrs={"class":"header"})
+#print(sirketler)
+
+#Birer birer şirket isimlerini yazar.
+sirketler = soup.find_all('h4',attrs={"class":"header"})
+i=0
+for sirket in sirketler:
+    print(sirket.a.text)
+    print("")
